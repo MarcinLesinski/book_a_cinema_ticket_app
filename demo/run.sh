@@ -1,0 +1,1 @@
+java -jar app.jar --spring.profiles.active=demo

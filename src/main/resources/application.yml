@@ -1,0 +1,8 @@
+spring:
+    jpa:
+        properties:
+            hibernate:
+                globally_quoted_identifiers: true
+properties:
+    links:
+        reservation_confirmation: "http://localhost:8080/%s/confirm"

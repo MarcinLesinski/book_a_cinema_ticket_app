@@ -1,0 +1,15 @@
+{
+  "screeningId": "f6801ed7-c68b-4fcc-9e30-450d3cfbcf51",
+  "bookerName": "Marcin",
+  "bookerSurname": "Lesiński",
+  "seats":[
+    "f056050e-9e97-4c45-b745-c211ffaf4807",
+    "e6d701b1-7977-4ee8-b2d2-725d57151bb5",
+    "edcb3416-05f5-410d-b80f-7cb1735ebb13"
+  ],
+  "tickets": [
+    "f530397c-da71-4afb-bfc3-e00e7fd3ddf8",
+    "22e29116-f8c7-40ce-9efd-94c11f24c747",
+    "a7e8f425-5e8f-4401-83dc-05d31085fd5d"
+  ]
+}

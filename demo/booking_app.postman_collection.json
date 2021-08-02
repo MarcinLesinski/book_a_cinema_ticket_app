@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "ef330f94-d7d0-421a-b32b-4156da00edbc",
+		"name": "booking_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Step 1 - get repertoires for given time interval",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2A - get screening info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/screenings/f6801ed7-c68b-4fcc-9e30-450d3cfbcf51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"screenings",
+						"f6801ed7-c68b-4fcc-9e30-450d3cfbcf51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 2B - get ticket types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 3 - post reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"screeningId\": \"f6801ed7-c68b-4fcc-9e30-450d3cfbcf51\",\r\n  \"bookerName\": \"Marcin\",\r\n  \"bookerSurname\": \"Lesiński\",\r\n  \"seats\":[\r\n    \"f056050e-9e97-4c45-b745-c211ffaf4807\",\r\n    \"e6d701b1-7977-4ee8-b2d2-725d57151bb5\",\r\n    \"edcb3416-05f5-410d-b80f-7cb1735ebb13\"\r\n  ],\r\n  \"tickets\": [\r\n    \"f530397c-da71-4afb-bfc3-e00e7fd3ddf8\",\r\n    \"22e29116-f8c7-40ce-9efd-94c11f24c747\",\r\n    \"a7e8f425-5e8f-4401-83dc-05d31085fd5d\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Step 4 - confirm reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/{put your reservation id here}/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"{put your reservation id here}",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
